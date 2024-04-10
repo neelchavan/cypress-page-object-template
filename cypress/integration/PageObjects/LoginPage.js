@@ -1,20 +1,20 @@
 /// <reference types="Cypress" />
 
+import HomePage from "./HomePage";
+
 class LoginPage {
-  fillUserName(username) {
-    cy.get("#user-name").type(username);
-  }
+  // define elements to interact with
+  elements = {
+    usernameField: () => cy.get("#user-name"),
+    passwordField: () => cy.get("#password"),
+    loginBtn: () => cy.get("#login-button"),
+  };
 
-  fillPassword(password) {
-    cy.get("#password").type(password);
-  }
-
-  clickOnLoginBtn() {
-    cy.get("#login-button").click();
-  }
-
-  verifyIfLoggedIn() {
-    cy.get(".product_label").should("have.text", "Products");
+  // define action to be perform
+  logInToSwagLabs(username, password) {
+    this.elements.usernameField().type(username);
+    this.elements.passwordField().type(password);
+    this.elements.loginBtn().click();
   }
 }
 
