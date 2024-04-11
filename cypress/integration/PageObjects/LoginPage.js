@@ -1,5 +1,3 @@
-/// <reference types="Cypress" />
-
 class LoginPage {
   // define elements to interact with
   elements = {
