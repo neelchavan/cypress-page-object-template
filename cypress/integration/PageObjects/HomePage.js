@@ -1,4 +1,5 @@
 class HomePage {
+  // define elements to interact with
   elements = {
     burgerBtn: () => cy.get(".bm-burger-button button"),
     logoutBtn: () => cy.get("#logout_sidebar_link"),
@@ -6,6 +7,7 @@ class HomePage {
     productsText: () => cy.get(".product_label"),
   };
 
+  // defining actions to be performed
   verifyIfLoggedIn() {
     this.elements.productsText().should("have.text", "Products");
   }

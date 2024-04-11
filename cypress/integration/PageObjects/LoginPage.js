@@ -1,7 +1,5 @@
 /// <reference types="Cypress" />
 
-import HomePage from "./HomePage";
-
 class LoginPage {
   // define elements to interact with
   elements = {
@@ -10,7 +8,7 @@ class LoginPage {
     loginBtn: () => cy.get("#login-button"),
   };
 
-  // define action to be perform
+  // defining actions to be performed
   logInToSwagLabs(username, password) {
     this.elements.usernameField().type(username);
     this.elements.passwordField().type(password);
