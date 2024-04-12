@@ -10,7 +10,7 @@ This repository serves as a template for setting up Cypress tests using the Page
 
 - Easy Setup: Get started quickly by cloning this repository and customizing it for your project.
 
-### Steps
+### Installation
 
 - Create a new repo with this template repository
 - Clone this template repo on your local machine
